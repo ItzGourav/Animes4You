@@ -2,8 +2,8 @@ import { Button } from "@mui/joy";
 
 export default function Home() {
   return (
-    <>
-      <Button className="text-3xl font-bold"> Yo Mofo </Button>
-    </>
+    <div className="flex justify-center h-full w-full mt-20">
+      <Button variant="outlined" className="text-3xl font-bold"> Yo Mofo </Button>
+    </div>
   )
 }
