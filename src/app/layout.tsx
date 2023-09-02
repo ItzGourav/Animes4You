@@ -2,9 +2,9 @@
 import { CssVarsProvider, extendTheme } from '@mui/joy'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,21 +17,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  const theme = extendTheme({
-    colorSchemes: {
-      dark: {
-        palette: {
-          primary: {
-            900: '#8159C3',
-          },
-        },
-      },
-    },
-  });
+  const theme = extendTheme({ cssVarPrefix: 'dark' });
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <CssVarsProvider
           defaultMode="dark"
           theme={theme}
