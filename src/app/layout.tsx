@@ -1,3 +1,5 @@
+"use client"
+import { CssVarsProvider, extendTheme } from '@mui/joy'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -14,9 +16,32 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+  const theme = extendTheme({
+    colorSchemes: {
+      dark: {
+        palette: {
+          primary: {
+            900: '#8159C3',
+          },
+        },
+      },
+    },
+  });
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <CssVarsProvider
+          defaultMode="dark"
+          theme={theme}
+          colorSchemeSelector="#demo_dark-mode-by-default"
+          modeStorageKey="demo_dark-mode-by-default"
+          disableNestedContext
+        >
+          {children}
+        </CssVarsProvider>
+      </body>
     </html>
   )
 }
