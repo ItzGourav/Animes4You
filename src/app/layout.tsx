@@ -1,5 +1,4 @@
-"use client"
-import { CssVarsProvider, extendTheme } from '@mui/joy'
+import JoyUITheme from '@/Components/JoyUITheme'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Poppins } from 'next/font/google'
@@ -17,20 +16,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  const theme = extendTheme({ cssVarPrefix: 'dark' });
 
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <CssVarsProvider
-          defaultMode="dark"
-          theme={theme}
-          colorSchemeSelector="#demo_dark-mode-by-default"
-          modeStorageKey="demo_dark-mode-by-default"
-          disableNestedContext
+        <JoyUITheme
         >
           {children}
-        </CssVarsProvider>
+        </JoyUITheme>
       </body>
     </html>
   )
