@@ -14,7 +14,7 @@ export default function Navbar() {
                 <div className='flex items-center gap-2 md:gap-4'>
                     <div className='flex items-center gap-2 md:gap-4'>
                         <HiMenuAlt2 className="text-4xl" />
-                        <div className='relative h-12 w-40'>
+                        <div className='relative h-12 w-36'>
                             <Image fill src={"/images/logo.png"} alt='animes4you-logo' />
                         </div>
                     </div>
