@@ -13,15 +13,17 @@ export const ANIMES = [
         type: "TV",
         isTrending: true,
         completed: false,
+        subOrDub: "sub"
     },
     {
         name: "Kimetsu no Yaiba: Katanakaji no Sato-hen",
         desc: 'For centuries, the Demon Slayer Corps has sacredly kept the location of Swordsmith Village a secret. As the village of the greatest forgers, it provides Demon Slayers with the finest...',
         image: "/images/ds.png",
         eps: 11,
-        type: "TV",
+        type: "ONA",
         isTrending: false,
         completed: true,
+        subOrDub: "dub"
     },
     {
         name: "One Piece",
@@ -31,6 +33,7 @@ export const ANIMES = [
         type: "TV",
         isTrending: true,
         completed: false,
+        subOrDub: "sub"
     },
     {
         name: "Kimetsu no Yaiba: Katanakaji no Sato-hen",
@@ -40,6 +43,7 @@ export const ANIMES = [
         type: "TV",
         isTrending: false,
         completed: true,
+        subOrDub: "dub"
     },
     {
         name: "One Piece",
@@ -49,5 +53,6 @@ export const ANIMES = [
         type: "TV",
         isTrending: true,
         completed: false,
+        subOrDub: "sub"
     },
 ]

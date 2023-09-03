@@ -8,4 +8,5 @@ export type animeT = {
     type: string;
     isTrending: boolean;
     completed: boolean;
+    subOrDub: string
 }
