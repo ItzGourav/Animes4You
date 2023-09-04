@@ -5,13 +5,13 @@ import Latest from '../Latest'
 
 export default function Home() {
     return (
-        <div className='flex gap-2'>
-            <div className='w-[75%]'>
+        <div className='flex flex-col xl:flex-row gap-2'>
+            <div className='xl:w-[75%]'>
                 <Slider />
                 <Popular />
                 <Latest />
             </div>
-            <div className='w-[25%] bg-white/5 h-[500px]'>
+            <div className='xl:w-[25%] bg-white/5 h-[500px]'>
 
             </div>
         </div>
