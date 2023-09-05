@@ -2,6 +2,8 @@ import React from 'react'
 import Slider from './Slider'
 import Popular from '../Popular'
 import Latest from '../Latest'
+import Recommendation from '../Recommendation'
+import Sidebar from './Sidebar'
 
 export default function Home() {
     return (
@@ -10,9 +12,10 @@ export default function Home() {
                 <Slider />
                 <Popular />
                 <Latest />
+                <Recommendation />
             </div>
-            <div className='xl:w-[25%] bg-white/5 h-[500px]'>
-
+            <div className='xl:w-[25%] h-[500px]'>
+                <Sidebar />
             </div>
         </div>
     )

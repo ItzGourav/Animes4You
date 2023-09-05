@@ -19,8 +19,8 @@ export default function AnimeCard({ item, isPopular, pos }: { item: animeT, isPo
                 <div className='absolute top-0 right-0 z-[4] '>
                     <Chip color='warning' radius='none' className='px-1 rounded-bl-xl'>{item?.subOrDub}</Chip>
                 </div>
-                {!isPopular && <div className='text-[13px] bg-black/80 flex justify-center items-center px-2 py-3 absolute bottom-0 left-0 w-full z-[2]'>
-                    {item?.name}
+                {!isPopular && <div className='text-sm bg-black/80 flex justify-center items-center px-2 py-1 sm:py-3 absolute bottom-0 left-0 w-full z-[2]'>
+                    <div className='line-clamp-1'>{item?.name}</div>
                 </div>}
             </div>
             <div className='flex justify-between mt-2'>

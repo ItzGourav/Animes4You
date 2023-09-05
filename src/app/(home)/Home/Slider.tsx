@@ -22,7 +22,7 @@ export default function Slider() {
                                         <p className="text-sm line-clamp-2 md:line-clamp-none">Gol D. Roger was known as the <q>Pirate King,</q> the strongest and most infamous being to have sailed the Grand Line. The capture and execution of Roger by the World…</p>
                                     </div>
                                     <div>
-                                        <Button className='rounded-full font-medium whitespace-nowrap hover:bg-surface py-5 px-7 bg-[#292929]'>
+                                        <Button size="lg" className='rounded-full whitespace-nowrap hover:bg-surface bg-[#292929]'>
                                             Watch Now
                                         </Button>
                                     </div>

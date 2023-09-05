@@ -1,6 +1,7 @@
 import { ANIMES } from '@/utils/constants'
 import React from 'react'
 import AnimeCard from '../components/AnimeCard'
+import { Button } from '@nextui-org/button'
 
 export default function Popular() {
     return (
