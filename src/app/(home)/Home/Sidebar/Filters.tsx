@@ -7,7 +7,7 @@ import { RiSearchLine } from 'react-icons/ri'
 export default function Filters() {
     return (
         <div className='bg-white/5'>
-            <div className='m-2'>
+            <div className='p-2'>
                 <div className='grid grid-cols-2 gap-2'>
                     <Select radius='sm' classNames={{ helperWrapper: "h-auto py-1" }} size='sm' label="Genre" multiple items={GENRE} selectionMode='multiple'>
                         {GENRE.map((i) => (
@@ -54,7 +54,7 @@ export default function Filters() {
                     </Select>
                 </div>
             </div>
-            <div className='flex justify-center bg-primary'>
+            <div className='flex justify-center rounded-b-md items-center gap-2 py-2 bg-primary'>
                 Search
                 <RiSearchLine />
             </div>
