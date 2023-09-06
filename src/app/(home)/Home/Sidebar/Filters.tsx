@@ -6,7 +6,7 @@ import { RiSearchLine } from 'react-icons/ri'
 
 export default function Filters() {
     return (
-        <div className='bg-white/5'>
+        <div className='bg-white/5 rounded-md'>
             <div className='p-2'>
                 <div className='grid grid-cols-2 gap-2'>
                     <Select radius='sm' classNames={{ helperWrapper: "h-auto py-1" }} size='sm' label="Genre" multiple items={GENRE} selectionMode='multiple'>

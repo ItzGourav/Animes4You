@@ -13,7 +13,8 @@ export const ANIMES = [
         type: "TV",
         isTrending: true,
         completed: false,
-        subOrDub: "sub"
+        subOrDub: "sub",
+        genre: ["Action", "Adventure", "Fantasy", "Shounen"]
     },
     {
         name: "Kimetsu no Yaiba: Katanakaji no Sato-hen",
@@ -23,7 +24,8 @@ export const ANIMES = [
         type: "ONA",
         isTrending: false,
         completed: true,
-        subOrDub: "dub"
+        subOrDub: "dub",
+        genre: ["Action", "Adventure", "Fantasy", "Shounen"]
     },
     {
         name: "One Piece",
@@ -33,7 +35,8 @@ export const ANIMES = [
         type: "TV",
         isTrending: true,
         completed: false,
-        subOrDub: "sub"
+        subOrDub: "sub",
+        genre: ["Action", "Adventure", "Fantasy", "Shounen"]
     },
     {
         name: "Kimetsu no Yaiba: Katanakaji no Sato-hen",
@@ -43,7 +46,8 @@ export const ANIMES = [
         type: "TV",
         isTrending: false,
         completed: true,
-        subOrDub: "dub"
+        subOrDub: "dub",
+        genre: ["Action", "Adventure", "Fantasy", "Shounen"]
     },
     {
         name: "One Piece",
@@ -53,7 +57,8 @@ export const ANIMES = [
         type: "TV",
         isTrending: true,
         completed: false,
-        subOrDub: "sub"
+        subOrDub: "sub",
+        genre: ["Action", "Adventure", "Fantasy", "Shounen"]
     },
 ]
 
