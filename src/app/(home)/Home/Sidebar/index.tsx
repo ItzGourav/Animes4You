@@ -1,6 +1,7 @@
 import React from 'react'
 import Filters from './Filters'
 import SeriesComp from './SeriesComp'
+import OnGoing from './OnGoing'
 
 export default function Sidebar() {
     return (
@@ -8,6 +9,7 @@ export default function Sidebar() {
             <Filters />
             <SeriesComp type='popular' />
             <SeriesComp type='new' />
+            <OnGoing />
         </div>
     )
 }

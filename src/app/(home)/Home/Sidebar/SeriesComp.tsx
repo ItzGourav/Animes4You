@@ -17,7 +17,7 @@ export default function SeriesComp({ type }: { type: compT }) {
     const [filterProps, setFilter] = useState<filterE>(filterE.WEEKLY)
 
     return (
-        <div className='bg-white/5'>
+        <div className='bg-white/5 rounded-md'>
             <div className='text-xl font-semibold p-3 '><span className='capitalize'>{type}</span> Series</div>
             {ANIMES.map((i, indx) => {
                 return (
@@ -39,8 +39,10 @@ const Item = ({ i, pos, type }: { i: animeT, pos: number, type: compT }) => {
         <div className='relative aspect-square w-[60px] flex-shrink-0 rounded-md overflow-hidden'><Image className='object-cover' src={i?.image} alt="anime-img" fill /></div>
         <div className='text-sm space-y-1'>
             <div className='font-medium'>{i?.name}</div>
-            <div className='text-xs'><span className='text-white/30 font-normal'>Genre: </span>{i?.genre.join(", ")}</div>
+            <div className=''><span className='text-white/30 font-normal'>Genre: </span>{i?.genre.join(", ")}</div>
+            {type === "new" &&
+                <div className=' text-primary'>Mappa Studios</div>
+            }
         </div>
-        <div className=''>Mappa Studios</div>
     </div>
 }
