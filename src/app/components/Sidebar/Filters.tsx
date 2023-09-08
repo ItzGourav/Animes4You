@@ -4,7 +4,7 @@ import { Select, SelectItem } from '@nextui-org/select'
 import React from 'react'
 import { RiSearchLine } from 'react-icons/ri'
 
-export default function Filters({ isSearch = false }: { isSearch: boolean }) {
+export default function Filters({ isSearch = false }: { isSearch?: boolean }) {
     return (
         <div className='bg-white/5 rounded-md'>
             <div className='p-2'>
