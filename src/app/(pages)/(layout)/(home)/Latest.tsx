@@ -1,7 +1,7 @@
 import { ANIMES } from '@/utils/constants'
 import React from 'react'
-import AnimeCard from '../components/AnimeCard'
 import { Button } from '@nextui-org/button'
+import AnimeCard from '@/app/components/AnimeCard'
 
 export default function Latest() {
     return (

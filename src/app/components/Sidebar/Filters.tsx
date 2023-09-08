@@ -4,11 +4,11 @@ import { Select, SelectItem } from '@nextui-org/select'
 import React from 'react'
 import { RiSearchLine } from 'react-icons/ri'
 
-export default function Filters() {
+export default function Filters({ isSearch = false }: { isSearch: boolean }) {
     return (
         <div className='bg-white/5 rounded-md'>
             <div className='p-2'>
-                <div className='grid grid-cols-2 gap-2'>
+                <div className='grid grid-cols-2 md:grid-cols-4 xl:grid-cols-2 gap-2'>
                     <Select radius='sm' classNames={{ helperWrapper: "h-auto py-1" }} size='sm' label="Genre" multiple items={GENRE} selectionMode='multiple'>
                         {GENRE.map((i) => (
                             <SelectItem key={i.value} value={i.value}>

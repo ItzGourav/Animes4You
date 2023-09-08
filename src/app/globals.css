@@ -9,6 +9,7 @@
 }
 
 body {
+  height: 100vh;
   background-color: #111111;
   color: rgb(223, 229, 235);
 }

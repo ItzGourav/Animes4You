@@ -44,7 +44,7 @@ export default function Slider() {
                 {
                     Array.from({ length: 6 }, (_, i) => i++).map((j) => {
                         return (
-                            <div key={j} className="keen-slider__slide bg-primary py-5 px-2 md:p-5 rounded-md flex justify-between items-center">
+                            <div key={j} className="keen-slider__slide bg-primary min-w-full py-5 px-2 md:p-5 rounded-md flex justify-between items-center">
                                 <div className="flex justify-between items-center flex-wrap md:flex-nowrap gap-2">
                                     <div className="max-w-[85%]">
                                         <h1 className="text-2xl font-medium italic">One Piece</h1>
