@@ -15,7 +15,6 @@ export default function Filters({ isSearch = false }: { isSearch?: boolean }) {
     const [order, setOrder] = useState<any>("")
 
 
-
     return (
         <div className='bg-white/5 rounded-md'>
 
