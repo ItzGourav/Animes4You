@@ -13,7 +13,7 @@ export default function Latest() {
                     return <AnimeCard key={indx} item={i} />
                 })}
             </div>
-            <div className='flex justify-center mt-3'>
+            <div className='flex justify-center mt-6'>
                 <Button variant='ghost' color='primary' className=''>Next</Button>
             </div>
         </div>

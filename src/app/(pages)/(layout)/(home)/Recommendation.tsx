@@ -15,7 +15,7 @@ export default function Recommendation() {
     ]
 
     return (
-        <div className="flex flex-wrap gap-4 py-7">
+        <div className="flex flex-wrap gap-4 py-10">
             <div className='w-full rounded-md bg-white/5'>
                 <Tabs
                     classNames={{
