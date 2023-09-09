@@ -23,7 +23,7 @@ export default function AnimeCard({ item, isPopular, pos }: { item: animeT, isPo
                 <div className='text-2xl font-semibold text-primary'>{pos && pos < 10 ? 0 : null}{pos}</div>
                 <div className='line-clamp-1'>{item?.name}</div>
             </div>}
-            <Tooltip className='max-w-[300px] min-w-[250px] backdrop-blur-md border border-primary bg-black/20 p-4'
+            <Tooltip className='max-w-[300px] min-w-[250px] backdrop-blur-md border border-primary bg-black/30 p-4'
                 classNames={{ base: " backdrop-blur-md" }}
                 placement='bottom' offset={-120} content={ttContent}>
                 <div className='relative aspect-[0.89] sm:aspect-[0.69] group rounded-md overflow-hidden cursor-pointer'>
