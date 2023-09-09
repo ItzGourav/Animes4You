@@ -1,20 +1,28 @@
+"use client"
 import { animeT } from '@/types/indes'
 import { Chip } from '@nextui-org/chip'
-import { Tooltip } from '@nextui-org/react'
+import { Button, Tooltip } from '@nextui-org/react'
 import Image from 'next/image'
 import React from 'react'
 import { FaFire, FaPlay } from "react-icons/fa"
 import { RxDotFilled } from "react-icons/rx"
+import { TbListDetails } from "react-icons/tb"
 
 export default function AnimeCard({ item, isPopular, pos }: { item: animeT, isPopular?: boolean, pos?: number }) {
 
     const ttContent = <div className='w-full'>
-        <div >{item?.name}</div>
-        <div className='flex text-sm items-center justify-between'>
+        <div className='underline decoration-primary decoration-2'>{item?.name}</div>
+        <div className='flex text-sm py-1 items-center justify-between'>
             <div>24 min. </div>
             <Chip color='primary'>{item?.type}</Chip>
         </div>
-        <div className='text-[13px] py-3 opacity-80'>{item.desc}</div>
+        <div className='text-[13px] py-2 opacity-70'>{item.desc}</div>
+        <div className='text-sm'>
+            <div>Status: <span className='text-xs opacity-70'>{item?.status}</span></div>
+            <div>Genre: <span className='text-xs opacity-70'>{item?.genre.join(", ")}</span></div>
+            <div>Studio: <span className='text-xs opacity-70'>{item?.studio}</span></div>
+        </div>
+        <Button startContent={<TbListDetails className="text-xl" />} color='primary' variant='flat' className='border font-medium border-primary w-full h-auto py-2 my-2'>More Detail</Button>
     </div>
 
     return (
@@ -23,7 +31,7 @@ export default function AnimeCard({ item, isPopular, pos }: { item: animeT, isPo
                 <div className='text-2xl font-semibold text-primary'>{pos && pos < 10 ? 0 : null}{pos}</div>
                 <div className='line-clamp-1'>{item?.name}</div>
             </div>}
-            <Tooltip className='max-w-[300px] min-w-[250px] backdrop-blur-md border border-primary bg-black/30 p-4'
+            <Tooltip className='max-w-[300px] min-w-[250px] shadow-2xl shadow-primary/40 backdrop-blur-lg border border-primary bg-black/50 p-4'
                 classNames={{ base: " backdrop-blur-md" }}
                 placement='bottom' offset={-120} content={ttContent}>
                 <div className='relative aspect-[0.89] sm:aspect-[0.69] group rounded-md overflow-hidden cursor-pointer'>

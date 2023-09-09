@@ -14,7 +14,9 @@ export const ANIMES = [
         isTrending: true,
         completed: false,
         subOrDub: "sub",
-        genre: ["Action", "Adventure", "Fantasy", "Shounen"]
+        genre: ["Action", "Adventure", "Fantasy", "Shounen"],
+        status: "ongoing",
+        studio: "Toei animation"
     },
     {
         name: "Kimetsu no Yaiba: Katanakaji no Sato-hen",
@@ -25,7 +27,9 @@ export const ANIMES = [
         isTrending: false,
         completed: true,
         subOrDub: "dub",
-        genre: ["Action", "Adventure", "Fantasy", "Shounen"]
+        genre: ["Action", "Adventure", "Fantasy", "Shounen"],
+        status: "completed",
+        studio: "ufotable"
     },
     {
         name: "One Piece",
@@ -36,7 +40,9 @@ export const ANIMES = [
         isTrending: true,
         completed: false,
         subOrDub: "sub",
-        genre: ["Action", "Adventure", "Fantasy", "Shounen"]
+        genre: ["Action", "Adventure", "Fantasy", "Shounen"],
+        status: "ongoing",
+        studio: "Toei animation"
     },
     {
         name: "Kimetsu no Yaiba: Katanakaji no Sato-hen",
@@ -47,7 +53,9 @@ export const ANIMES = [
         isTrending: false,
         completed: true,
         subOrDub: "dub",
-        genre: ["Action", "Adventure", "Fantasy", "Shounen"]
+        genre: ["Action", "Adventure", "Fantasy", "Shounen"],
+        status: "completed",
+        studio: "ufotable"
     },
     {
         name: "One Piece",
@@ -58,7 +66,9 @@ export const ANIMES = [
         isTrending: true,
         completed: false,
         subOrDub: "sub",
-        genre: ["Action", "Adventure", "Fantasy", "Shounen"]
+        genre: ["Action", "Adventure", "Fantasy", "Shounen"],
+        status: "ongoing",
+        studio: "Toei animation"
     },
 ]
 

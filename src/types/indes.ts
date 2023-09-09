@@ -10,4 +10,6 @@ export type animeT = {
     completed: boolean;
     subOrDub: string;
     genre: string[];
+    status: string;
+    studio: string;
 }
