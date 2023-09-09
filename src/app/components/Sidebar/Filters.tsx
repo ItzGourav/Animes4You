@@ -14,6 +14,12 @@ export default function Filters({ isSearch = false }: { isSearch?: boolean }) {
     const [type, setType] = useState<any>("")
     const [order, setOrder] = useState<any>("")
 
+    function onSearch() {
+        if (!isSearch) {
+            // router.push(`/s?genre=${genre}&season=${season}&studio=${studio}&status=${status}&type=${type}&order=${order}`)
+            router.push(`/s`)
+        }
+    }
 
     return (
         <div className='bg-white/5 rounded-md'>
@@ -65,11 +71,7 @@ export default function Filters({ isSearch = false }: { isSearch?: boolean }) {
                     </Select>
                 </div>
             </div>
-            <div onClick={() => {
-                if (!isSearch) {
-                    router.push("/s")
-                }
-            }} className='flex justify-center rounded-b-md items-center gap-2 cursor-pointer py-2 bg-primary'>
+            <div onClick={onSearch} className='flex justify-center rounded-b-md items-center gap-2 cursor-pointer py-2 bg-primary'>
                 Search
                 <RiSearchLine />
             </div>

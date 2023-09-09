@@ -1,9 +1,9 @@
 "use client"
 import { animeT } from '@/types/indes'
 import { ANIMES } from '@/utils/constants'
-import { Chip, Divider } from '@nextui-org/react'
+import { Chip, Divider, Tab, Tabs } from '@nextui-org/react'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 enum filterE {
     WEEKLY = "weekly",
@@ -11,14 +11,34 @@ enum filterE {
     ALL = "all",
 }
 
+
 type compT = "popular" | "new"
 
 export default function SeriesComp({ type }: { type: compT }) {
-    const [filterProps, setFilter] = useState<filterE>(filterE.WEEKLY)
+    const [filter, setFilter] = useState<any>(filterE.WEEKLY)
 
     return (
         <div className='bg-white/5 rounded-md'>
             <div className='text-xl font-semibold p-3 '><span className='capitalize'>{type}</span> Series</div>
+
+            <div className='w-full'>
+                <Tabs
+                    classNames={{
+                        base: "w-full",
+                        tabList: "w-full"
+                    }}
+                    variant='underlined'
+                    color='primary'
+                    aria-label="Options"
+                    selectedKey={filter}
+                    onSelectionChange={setFilter}
+                >
+                    <Tab key="weekly" title="Weekly" />
+                    <Tab key="monthly" title="Monthly" />
+                    <Tab key="all" title="All" />
+                </Tabs>
+
+            </div>
             {ANIMES.map((i, indx) => {
                 return (
                     <React.Fragment key={indx}>

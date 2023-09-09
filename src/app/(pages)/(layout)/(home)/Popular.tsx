@@ -1,3 +1,4 @@
+"use client"
 import AnimeCard from '@/app/components/AnimeCard'
 import { ANIMES } from '@/utils/constants'
 import React from 'react'

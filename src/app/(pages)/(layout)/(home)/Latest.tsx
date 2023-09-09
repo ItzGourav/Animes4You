@@ -1,3 +1,4 @@
+"use client"
 import { ANIMES } from '@/utils/constants'
 import React from 'react'
 import { Button } from '@nextui-org/button'
