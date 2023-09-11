@@ -5,7 +5,6 @@ import { ANIMES } from '@/utils/constants'
 import React from 'react'
 
 export default function page({ searchParams }: any) {
-    // console.log(searchParams, "searchParams")
     return (
         <div>
             <Filters isSearch={true} />

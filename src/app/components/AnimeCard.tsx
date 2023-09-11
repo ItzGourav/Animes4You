@@ -1,8 +1,10 @@
 "use client"
 import { animeT } from '@/types/indes'
+import { linkFormatter } from '@/utils/helpers'
 import { Chip } from '@nextui-org/chip'
 import { Button, Tooltip } from '@nextui-org/react'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import { FaFire, FaPlay } from "react-icons/fa"
 import { RxDotFilled } from "react-icons/rx"
@@ -19,11 +21,13 @@ export default function AnimeCard({ item, isPopular, pos }: { item: animeT, isPo
         <div className='text-[13px] py-2 opacity-70'>{item.desc}</div>
         <div className='text-sm'>
             <div>Status: <span className='text-xs opacity-70'>{item?.status}</span></div>
-            <div>Genre: <span className='text-xs opacity-70'>{item?.genre.join(", ")}</span></div>
-            <div>Studio: <span className='text-xs opacity-70'>{item?.studio}</span></div>
+            <div>Genre: {item?.genre?.map((g, indx) => {
+                return <Link href={`/genre/${linkFormatter(g)}`} key={indx} className='text-xs opacity-70 hover:opacity-[1] hover:text-primary transition-all hover:underline decoration-primary'>{g}{indx !== item?.genre.length - 1 ? ", " : "."}</Link>
+            })}</div>
+            <div>Studio: <Link href={`/studio/${linkFormatter(item?.studio)}`} className='text-xs opacity-70'>{item?.studio}</Link></div>
         </div>
         <Button startContent={<TbListDetails className="text-xl" />} color='primary' variant='flat' className='border font-medium border-primary w-full h-auto py-2 my-2'>More Detail</Button>
-    </div>
+    </div >
 
     return (
         <div className='rounded-md overflow-hidden'>
