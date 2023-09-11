@@ -61,12 +61,19 @@ const Item = ({ i, pos, type }: { i: animeT, pos: number, type: compT }) => {
         <div className='text-sm space-y-1'>
             <div className='font-medium'>{i?.name}</div>
             <div className=''><span className='text-white/30 font-normal'>Genre: </span>{i?.genre.join(", ")}</div>
-            {type === 'popular' && <StarRatings
-                rating={+i?.rating}
-                starRatedColor="blue"
-                numberOfStars={6}
-                name='rating'
-            />}
+            {type === 'popular' && <>
+                <StarRatings
+                    rating={+i?.rating / 2}
+                    starDimension="15px"
+                    starRatedColor="#f5c60d"
+                    starEmptyColor='#ffffff61'
+                    starSpacing='1px'
+                    numberOfStars={5}
+                    name='rating'
+                />
+                <span className='text-sm'>{+i?.rating}</span>
+            </>
+            }
             {type === "new" &&
                 <div className=' text-primary'>Mappa Studios</div>
             }
