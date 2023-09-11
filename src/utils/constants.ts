@@ -16,7 +16,9 @@ export const ANIMES = [
         subOrDub: "sub",
         genre: ["Action", "Adventure", "Fantasy", "Shounen"],
         status: "ongoing",
-        studio: "Toei animation"
+        studio: "Toei animation",
+        director: ["Nagamine Tatsuya", "Uda Kounosuke"],
+        cast: ["Cho", "Gouri", "Daisuke", "Hirata", "Hiroaki", "Nakai", "Kazuya", "Okamura", "Akemi", "Ootani", "Ikue", "Tanaka", "Mayumi", "Yamaguchi", "Kappei", "Yamaguchi", "Yuriko", "Yao", "Kazuki"]
     },
     {
         name: "Kimetsu no Yaiba: Katanakaji no Sato-hen",
@@ -29,7 +31,9 @@ export const ANIMES = [
         subOrDub: "dub",
         genre: ["Action", "Adventure", "Fantasy", "Shounen"],
         status: "completed",
-        studio: "ufotable"
+        studio: "ufotable",
+        cast: ["Hanae", "Natsuki", "Hanazawa", "Kana", "Hino", "Satoshi", "Ishida", "Akira", "Kawanishi", "Kengo", "Kitou", "Akari", "Konishi", "Katsuyuki", "Matsuoka", "Yoshitsugu", "Shimono", "Hiro", "Ueda", "Reina"],
+        director: ["Haruo Sotozaki"]
     },
     {
         name: "One Piece",
@@ -42,7 +46,9 @@ export const ANIMES = [
         subOrDub: "sub",
         genre: ["Action", "Adventure", "Fantasy", "Shounen"],
         status: "ongoing",
-        studio: "Toei animation"
+        studio: "Toei animation",
+        director: ["Nagamine Tatsuya", "Uda Kounosuke"],
+        cast: ["Cho", "Gouri", "Daisuke", "Hirata", "Hiroaki", "Nakai", "Kazuya", "Okamura", "Akemi", "Ootani", "Ikue", "Tanaka", "Mayumi", "Yamaguchi", "Kappei", "Yamaguchi", "Yuriko", "Yao", "Kazuki"]
     },
     {
         name: "Kimetsu no Yaiba: Katanakaji no Sato-hen",
@@ -55,7 +61,10 @@ export const ANIMES = [
         subOrDub: "dub",
         genre: ["Action", "Adventure", "Fantasy", "Shounen"],
         status: "completed",
-        studio: "ufotable"
+        studio: "ufotable",
+        cast: ["Hanae", "Natsuki", "Hanazawa", "Kana", "Hino", "Satoshi", "Ishida", "Akira", "Kawanishi", "Kengo", "Kitou", "Akari", "Konishi", "Katsuyuki", "Matsuoka", "Yoshitsugu", "Shimono", "Hiro", "Ueda", "Reina"],
+        director: ["Haruo Sotozaki"]
+
     },
     {
         name: "One Piece",
@@ -68,7 +77,9 @@ export const ANIMES = [
         subOrDub: "sub",
         genre: ["Action", "Adventure", "Fantasy", "Shounen"],
         status: "ongoing",
-        studio: "Toei animation"
+        studio: "Toei animation",
+        director: ["Nagamine Tatsuya", "Uda Kounosuke"],
+        cast: ["Cho", "Gouri", "Daisuke", "Hirata", "Hiroaki", "Nakai", "Kazuya", "Okamura", "Akemi", "Ootani", "Ikue", "Tanaka", "Mayumi", "Yamaguchi", "Kappei", "Yamaguchi", "Yuriko", "Yao", "Kazuki"]
     },
 ]
 

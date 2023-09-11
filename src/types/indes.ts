@@ -12,4 +12,6 @@ export type animeT = {
     genre: string[];
     status: string;
     studio: string;
+    director: string[];
+    cast: string[];
 }
