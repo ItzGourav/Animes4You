@@ -17,6 +17,7 @@ export const ANIMES = [
         genre: ["Action", "Adventure", "Fantasy", "Shounen"],
         status: "ongoing",
         studio: "Toei animation",
+        rating: "9.2",
         director: ["Nagamine Tatsuya", "Uda Kounosuke"],
         cast: ["Cho", "Gouri", "Daisuke", "Hirata", "Hiroaki", "Nakai", "Kazuya", "Okamura", "Akemi", "Ootani", "Ikue", "Tanaka", "Mayumi", "Yamaguchi", "Kappei", "Yamaguchi", "Yuriko", "Yao", "Kazuki"]
     },
@@ -32,6 +33,7 @@ export const ANIMES = [
         genre: ["Action", "Adventure", "Fantasy", "Shounen"],
         status: "completed",
         studio: "ufotable",
+        rating: "8.7",
         cast: ["Hanae", "Natsuki", "Hanazawa", "Kana", "Hino", "Satoshi", "Ishida", "Akira", "Kawanishi", "Kengo", "Kitou", "Akari", "Konishi", "Katsuyuki", "Matsuoka", "Yoshitsugu", "Shimono", "Hiro", "Ueda", "Reina"],
         director: ["Haruo Sotozaki"]
     },
@@ -47,6 +49,7 @@ export const ANIMES = [
         genre: ["Action", "Adventure", "Fantasy", "Shounen"],
         status: "ongoing",
         studio: "Toei animation",
+        rating: "9.2",
         director: ["Nagamine Tatsuya", "Uda Kounosuke"],
         cast: ["Cho", "Gouri", "Daisuke", "Hirata", "Hiroaki", "Nakai", "Kazuya", "Okamura", "Akemi", "Ootani", "Ikue", "Tanaka", "Mayumi", "Yamaguchi", "Kappei", "Yamaguchi", "Yuriko", "Yao", "Kazuki"]
     },
@@ -62,6 +65,7 @@ export const ANIMES = [
         genre: ["Action", "Adventure", "Fantasy", "Shounen"],
         status: "completed",
         studio: "ufotable",
+        rating: "8.7",
         cast: ["Hanae", "Natsuki", "Hanazawa", "Kana", "Hino", "Satoshi", "Ishida", "Akira", "Kawanishi", "Kengo", "Kitou", "Akari", "Konishi", "Katsuyuki", "Matsuoka", "Yoshitsugu", "Shimono", "Hiro", "Ueda", "Reina"],
         director: ["Haruo Sotozaki"]
 
@@ -78,6 +82,7 @@ export const ANIMES = [
         genre: ["Action", "Adventure", "Fantasy", "Shounen"],
         status: "ongoing",
         studio: "Toei animation",
+        rating: "9.2",
         director: ["Nagamine Tatsuya", "Uda Kounosuke"],
         cast: ["Cho", "Gouri", "Daisuke", "Hirata", "Hiroaki", "Nakai", "Kazuya", "Okamura", "Akemi", "Ootani", "Ikue", "Tanaka", "Mayumi", "Yamaguchi", "Kappei", "Yamaguchi", "Yuriko", "Yao", "Kazuki"]
     },

@@ -11,6 +11,7 @@ export type animeT = {
     subOrDub: string;
     genre: string[];
     status: string;
+    rating: string;
     studio: string;
     director: string[];
     cast: string[];

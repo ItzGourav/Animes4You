@@ -4,6 +4,7 @@ import { ANIMES } from '@/utils/constants'
 import { Chip, Divider, Tab, Tabs } from '@nextui-org/react'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
+import StarRatings from 'react-star-ratings';
 
 enum filterE {
     WEEKLY = "weekly",
@@ -60,6 +61,12 @@ const Item = ({ i, pos, type }: { i: animeT, pos: number, type: compT }) => {
         <div className='text-sm space-y-1'>
             <div className='font-medium'>{i?.name}</div>
             <div className=''><span className='text-white/30 font-normal'>Genre: </span>{i?.genre.join(", ")}</div>
+            {type === 'popular' && <StarRatings
+                rating={+i?.rating}
+                starRatedColor="blue"
+                numberOfStars={6}
+                name='rating'
+            />}
             {type === "new" &&
                 <div className=' text-primary'>Mappa Studios</div>
             }
