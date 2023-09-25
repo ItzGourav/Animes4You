@@ -9,7 +9,6 @@ import { useSearchParams, usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 export default function Filters() {
-    const router = useRouter()
     const searchParams = useSearchParams()
     const pathname = usePathname()
     const [genre, setGenre] = useState<string[]>(searchParams?.get('genre')?.split(",") || [])
