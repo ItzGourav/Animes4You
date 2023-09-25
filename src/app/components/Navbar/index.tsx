@@ -44,7 +44,7 @@ export default function Navbar() {
             </div>
             {
                 showSearch &&
-                <Input placeholder='Search...' variant='flat' size='lg' radius='full' className='p-4 rounded-full w-full max-w-md absolute z-30 -bottom-10 right-0 sm:right-5 ' />
+                <Input placeholder='Search...' variant='flat' size='lg' radius='full' className='p-4 rounded-full w-full' />
             }
         </div>
     )
