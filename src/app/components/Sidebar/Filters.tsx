@@ -14,13 +14,10 @@ export default function Filters({ isSearch = false }: { isSearch?: boolean }) {
     const [type, setType] = useState("")
     const [order, setOrder] = useState("")
 
-
-    console.log(typeof genre, "genre")
-
     function onSearch() {
         if (!isSearch) {
-            // router.push(`/s?genre=${genre}&season=${season}&studio=${studio}&status=${status}&type=${type}&order=${order}`)
-            router.push(`/s`)
+            router.push(`/s?genre=${genre.join(",")}&season=${season.join(",")}&studio=${studio.join(",")}&status=${status}&type=${type}&order=${order}`)
+            // router.push(`/s`)
         }
     }
 
@@ -43,7 +40,8 @@ export default function Filters({ isSearch = false }: { isSearch?: boolean }) {
                             </SelectItem>
                         ))}
                     </Select>
-                    {/* <Select selectedKeys={studio} onSelectionChange={setStudio} radius='sm' classNames={{ helperWrapper: "h-auto py-1" }} size='sm' label="Studio" multiple items={STUDIOS} selectionMode='multiple'>
+
+                    <Select selectedKeys={studio} onSelectionChange={(e: any) => setStudio(Array.from(e))} radius='sm' classNames={{ helperWrapper: "h-auto py-1" }} size='sm' label="Studio" multiple items={STUDIOS} selectionMode='multiple'>
                         {STUDIOS.map((i) => (
                             <SelectItem key={i.value} value={i.value}>
                                 {i.label}
@@ -51,27 +49,28 @@ export default function Filters({ isSearch = false }: { isSearch?: boolean }) {
                         ))}
                     </Select>
 
-                    <Select selectedKeys={status} value={status} onSelectionChange={setStatus} radius='sm' size='sm' label="Status">
+                    <Select selectedKeys={[status]} value={status} onChange={(e) => setStatus(e.target.value)} radius='sm' size='sm' label="Status">
                         {STATUSES.map((i) => (
                             <SelectItem key={i.value} value={i.value}>
                                 {i.label}
                             </SelectItem>
                         ))}
                     </Select>
-                    <Select selectedKeys={type} value={type} onSelectionChange={setType} radius='sm' size='sm' label="Type">
+
+                    <Select selectedKeys={[type]} value={type} onChange={(e) => setType(e.target.value)} radius='sm' size='sm' label="Type">
                         {MEDIATYPES.map((i) => (
                             <SelectItem key={i.value} value={i.value}>
                                 {i.label}
                             </SelectItem>
                         ))}
                     </Select>
-                    <Select selectedKeys={order} value={order} onSelectionChange={setOrder} radius='sm' size='sm' label="Order by">
+                    <Select selectedKeys={[order]} value={order} onChange={(e) => setOrder(e.target.value)} radius='sm' size='sm' label="Order by">
                         {SORT.map((i) => (
                             <SelectItem key={i.value} value={i.value}>
                                 {i.label}
                             </SelectItem>
                         ))}
-                    </Select> */}
+                    </Select>
                 </div>
             </div>
             <div onClick={onSearch} className='flex justify-center rounded-b-md items-center gap-2 cursor-pointer py-2 bg-primary'>
