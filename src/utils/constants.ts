@@ -89,6 +89,7 @@ export const ANIMES = [
 ]
 
 export const GENRE = [
+    { label: "All", value: "all" },
     { label: "Action", value: "action" },
     { label: "Adventure", value: "adventure" },
     { label: "Comedy", value: "comedy" },
@@ -105,6 +106,7 @@ export const GENRE = [
 ];
 
 export const SEASONS = [
+    { label: "All", value: "all" },
     { label: "Fall 1999", value: "fall-1999" },
     { label: "Fall 2002", value: "fall-2002" },
     { label: "Fall 2004", value: "fall-2004" },
@@ -121,6 +123,7 @@ export const SEASONS = [
 ]
 
 export const STUDIOS = [
+    { label: "All", value: "all" },
     { label: "A-1 Pictures", value: "a-1-pictures" },
     { label: "AIC", value: "aic" },
     { label: "Asahi Production", value: "asahi-production" },

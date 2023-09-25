@@ -7,12 +7,15 @@ import { useRouter } from 'next/navigation';
 
 export default function Filters({ isSearch = false }: { isSearch?: boolean }) {
     const router = useRouter()
-    const [genre, setGenre] = useState<any>(new Set([]))
-    const [season, setSeason] = useState<any>(new Set([]))
-    const [studio, setStudio] = useState<any>(new Set([]))
-    const [status, setStatus] = useState<any>("")
-    const [type, setType] = useState<any>("")
-    const [order, setOrder] = useState<any>("")
+    const [genre, setGenre] = useState<string[]>([])
+    const [season, setSeason] = useState<string[]>([])
+    const [studio, setStudio] = useState<string[]>([])
+    const [status, setStatus] = useState("")
+    const [type, setType] = useState("")
+    const [order, setOrder] = useState("")
+
+
+    console.log(typeof genre, "genre")
 
     function onSearch() {
         if (!isSearch) {
@@ -26,21 +29,21 @@ export default function Filters({ isSearch = false }: { isSearch?: boolean }) {
 
             <div className='p-2'>
                 <div className={`grid grid-cols-2 md:grid-cols-4 ${isSearch ? "xl:grid-cols-4" : "xl:grid-cols-2"} gap-2`}>
-                    <Select selectedKeys={genre} onSelectionChange={setGenre} radius='sm' classNames={{ helperWrapper: "h-auto py-1" }} size='sm' label="Genre" multiple items={GENRE} selectionMode='multiple'>
+                    <Select selectedKeys={genre} onSelectionChange={(e: any) => setGenre(Array.from(e))} radius='sm' classNames={{ helperWrapper: "h-auto py-1" }} size='sm' label="Genre" multiple items={GENRE} selectionMode='multiple'>
                         {GENRE.map((i) => (
                             <SelectItem key={i.value} value={i.value}>
                                 {i.label}
                             </SelectItem>
                         ))}
                     </Select>
-                    <Select selectedKeys={season} onSelectionChange={setSeason} radius='sm' classNames={{ helperWrapper: "h-auto py-1" }} size='sm' label="Season" multiple items={SEASONS} selectionMode='multiple'>
+                    <Select selectedKeys={season} onSelectionChange={(e: any) => setSeason(Array.from(e))} radius='sm' classNames={{ helperWrapper: "h-auto py-1" }} size='sm' label="Season" multiple items={SEASONS} selectionMode='multiple'>
                         {SEASONS.map((i) => (
                             <SelectItem key={i.value} value={i.value}>
                                 {i.label}
                             </SelectItem>
                         ))}
                     </Select>
-                    <Select selectedKeys={studio} onSelectionChange={setStudio} radius='sm' classNames={{ helperWrapper: "h-auto py-1" }} size='sm' label="Studio" multiple items={STUDIOS} selectionMode='multiple'>
+                    {/* <Select selectedKeys={studio} onSelectionChange={setStudio} radius='sm' classNames={{ helperWrapper: "h-auto py-1" }} size='sm' label="Studio" multiple items={STUDIOS} selectionMode='multiple'>
                         {STUDIOS.map((i) => (
                             <SelectItem key={i.value} value={i.value}>
                                 {i.label}
@@ -68,7 +71,7 @@ export default function Filters({ isSearch = false }: { isSearch?: boolean }) {
                                 {i.label}
                             </SelectItem>
                         ))}
-                    </Select>
+                    </Select> */}
                 </div>
             </div>
             <div onClick={onSearch} className='flex justify-center rounded-b-md items-center gap-2 cursor-pointer py-2 bg-primary'>
