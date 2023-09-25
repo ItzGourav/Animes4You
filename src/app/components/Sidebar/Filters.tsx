@@ -5,28 +5,25 @@ import React, { useEffect, useState } from 'react'
 import { RiSearchLine } from 'react-icons/ri'
 import { useRouter } from 'next/navigation';
 import { filterLinkFormatter } from '@/utils/helpers';
+import { useSearchParams, usePathname } from 'next/navigation';
+import Link from 'next/link';
 
-export default function Filters({ isSearch = false }: { isSearch?: boolean }) {
+export default function Filters() {
     const router = useRouter()
-    const [genre, setGenre] = useState<string[]>([])
-    const [season, setSeason] = useState<string[]>([])
-    const [studio, setStudio] = useState<string[]>([])
-    const [status, setStatus] = useState([])
-    const [type, setType] = useState([])
-    const [order, setOrder] = useState([])
-
-    function onSearch() {
-        if (!isSearch) {
-            router.push(filterLinkFormatter({ genre, order, season, status, type, studio }));
-            // router.push(`/s`)
-        }
-    }
+    const searchParams = useSearchParams()
+    const pathname = usePathname()
+    const [genre, setGenre] = useState<string[]>(searchParams?.get('genre')?.split(",") || [])
+    const [season, setSeason] = useState<string[]>(searchParams?.get('season')?.split(",") || [])
+    const [studio, setStudio] = useState<string[]>(searchParams?.get('studio')?.split(",") || [])
+    const [status, setStatus] = useState(searchParams?.get('status')?.split(",") || [])
+    const [type, setType] = useState(searchParams?.get('type')?.split(",") || [])
+    const [order, setOrder] = useState(searchParams?.get('order')?.split(",") || [])
 
     return (
         <div className='bg-white/5 rounded-md'>
 
             <div className='p-2'>
-                <div className={`grid grid-cols-2 md:grid-cols-4 ${isSearch ? "xl:grid-cols-4" : "xl:grid-cols-2"} gap-2`}>
+                <div className={`grid grid-cols-2 md:grid-cols-4 ${pathname.includes("/s") ? "xl:grid-cols-4" : "xl:grid-cols-2"} gap-2`}>
                     <Select selectedKeys={genre} onSelectionChange={(e: any) => setGenre(Array.from(e))} radius='sm' classNames={{ helperWrapper: "h-auto py-1" }} size='sm' label="Genre" multiple items={GENRE} selectionMode='multiple'>
                         {GENRE.map((i) => (
                             <SelectItem key={i.value} value={i.value}>
@@ -74,10 +71,14 @@ export default function Filters({ isSearch = false }: { isSearch?: boolean }) {
                     </Select>
                 </div>
             </div>
-            <div onClick={onSearch} className='flex justify-center rounded-b-md items-center gap-2 cursor-pointer py-2 bg-primary'>
-                Search
-                <RiSearchLine />
-            </div>
+
+            <Link href={filterLinkFormatter({ genre, order, season, status, type, studio })}>
+                <div className='flex justify-center rounded-b-md items-center gap-2 cursor-pointer py-2 bg-primary'>
+                    Search
+                    <RiSearchLine />
+                </div>
+            </Link>
+
         </div >
     )
 }
