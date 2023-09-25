@@ -4,19 +4,20 @@ import { Select, SelectItem } from '@nextui-org/select'
 import React, { useEffect, useState } from 'react'
 import { RiSearchLine } from 'react-icons/ri'
 import { useRouter } from 'next/navigation';
+import { filterLinkFormatter } from '@/utils/helpers';
 
 export default function Filters({ isSearch = false }: { isSearch?: boolean }) {
     const router = useRouter()
     const [genre, setGenre] = useState<string[]>([])
     const [season, setSeason] = useState<string[]>([])
     const [studio, setStudio] = useState<string[]>([])
-    const [status, setStatus] = useState("")
-    const [type, setType] = useState("")
-    const [order, setOrder] = useState("")
+    const [status, setStatus] = useState([])
+    const [type, setType] = useState([])
+    const [order, setOrder] = useState([])
 
     function onSearch() {
         if (!isSearch) {
-            router.push(`/s?genre=${genre.join(",")}&season=${season.join(",")}&studio=${studio.join(",")}&status=${status}&type=${type}&order=${order}`)
+            router.push(filterLinkFormatter({ genre, order, season, status, type, studio }));
             // router.push(`/s`)
         }
     }
@@ -49,7 +50,7 @@ export default function Filters({ isSearch = false }: { isSearch?: boolean }) {
                         ))}
                     </Select>
 
-                    <Select selectedKeys={[status]} value={status} onChange={(e) => setStatus(e.target.value)} radius='sm' size='sm' label="Status">
+                    <Select selectedKeys={status} items={STATUSES} onSelectionChange={(e: any) => setStatus(Array.from(e))} radius='sm' size='sm' label="Status">
                         {STATUSES.map((i) => (
                             <SelectItem key={i.value} value={i.value}>
                                 {i.label}
@@ -57,14 +58,14 @@ export default function Filters({ isSearch = false }: { isSearch?: boolean }) {
                         ))}
                     </Select>
 
-                    <Select selectedKeys={[type]} value={type} onChange={(e) => setType(e.target.value)} radius='sm' size='sm' label="Type">
+                    <Select selectedKeys={type} items={MEDIATYPES} onSelectionChange={(e: any) => setType(Array.from(e))} radius='sm' size='sm' label="Type">
                         {MEDIATYPES.map((i) => (
                             <SelectItem key={i.value} value={i.value}>
                                 {i.label}
                             </SelectItem>
                         ))}
                     </Select>
-                    <Select selectedKeys={[order]} value={order} onChange={(e) => setOrder(e.target.value)} radius='sm' size='sm' label="Order by">
+                    <Select selectedKeys={order} items={SORT} onSelectionChange={(e: any) => setOrder(Array.from(e))} radius='sm' size='sm' label="Order by">
                         {SORT.map((i) => (
                             <SelectItem key={i.value} value={i.value}>
                                 {i.label}
