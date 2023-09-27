@@ -3,7 +3,7 @@ import { ANIMES } from '@/utils/constants'
 import React from 'react'
 
 export default function Director({ params }: { params: { slug: string } }) {
-    let slug = params?.slug
+    let slug = decodeURIComponent(params?.slug)
     return (
         <div>
             <div className='text-[15px]'>
