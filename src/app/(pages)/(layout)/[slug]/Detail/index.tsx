@@ -17,8 +17,8 @@ export default function Detail({ slug }: { slug: string }) {
     return (
         <div>
             <div className="flex gap-4 bg-white/5 p-4 rounded-sm">
-                <div className="basis-[15%]">
-                    <div className="relative max-w-[150px] rounded-sm overflow-hidden aspect-[0.69]">
+                <div className="basis-[18%]">
+                    <div className="relative max-w-[180px] rounded-sm overflow-hidden aspect-[0.69]">
                         <Image fill src={detail?.image} alt="anime-poster" />
                     </div>
                     <div className="bg-black/50 rounded-md text-center my-3 p-3">
@@ -50,7 +50,7 @@ export default function Detail({ slug }: { slug: string }) {
                 </div>
                 <div className="flex-1">
                     <div className=" mb-3 font-medium text-2xl underline decoration-primary">{detail?.name}</div>
-                    <div className="text-sm font-light text-white/80 " >Watch full episodes {detail?.name}, download {detail?.name} english subbed, {detail?.name} eng sub, download {detail?.name} eng sub, stream {detail?.name} at Animes4You.
+                    <div className="text-sm font-light text-white/80 " >Watch full episodes <span className="font-semibold">{detail.name}</span>, download {detail?.name} english subbed, {detail?.name} eng sub, download {detail?.name} eng sub, stream {detail?.name} at Animes4You.
                         {detail?.name}</div>
                     <div className="flex flex-wrap justify-between gap-20">
                         <div className="max-w-40%">
@@ -82,6 +82,9 @@ export default function Detail({ slug }: { slug: string }) {
                         {detail?.genre?.map((i, indx) => {
                             return <Button as={Link} href={`/genre/${i?.toLowerCase()}`} key={indx} size="sm" variant="flat" radius="sm" color="primary">{i}</Button>
                         })}
+                    </div>
+                    <div className="text-sm font-light text-white/80 my-3">
+                        Watch streaming <span className="font-semibold">{detail.name}</span> English Subbed on Animes4You. You can also download free {detail.name} Eng Sub, don&apos;t forget to watch online streaming of various quality 720P 360P 240P 480P according to your connection to save internet quota, {detail.name} on Animes4You MP4 MKV hardsub softsub English subbed is already contained in the video.
                     </div>
                 </div>
             </div>
