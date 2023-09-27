@@ -14,5 +14,6 @@ export type animeT = {
     rating: string;
     studio: string;
     director: string[];
+    slug: string;
     cast: string[];
 }

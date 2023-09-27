@@ -18,7 +18,7 @@ export default function AnimeCard({ item, isPopular, pos }: { item: animeT, isPo
             <div>24 min. </div>
             <Chip color='primary'>{item?.type}</Chip>
         </div>
-        <div className='text-[13px] py-2 opacity-70'>{item.desc}</div>
+        <div className='text-[13px] py-2 opacity-70'>{item?.desc}</div>
         <div className='text-sm'>
             <div>Status: <span className='text-xs opacity-70'>{item?.status}</span></div>
             <div>Genre: {item?.genre?.map((g, indx) => {
@@ -26,7 +26,7 @@ export default function AnimeCard({ item, isPopular, pos }: { item: animeT, isPo
             })}</div>
             <div>Studio: <Link href={`/studio/${linkFormatter(item?.studio)}`} className='text-xs opacity-70 hover:opacity-[1] hover:text-primary transition-all underline decoration-primary'>{item?.studio}</Link></div>
         </div>
-        <Button startContent={<TbListDetails className="text-xl" />} color='primary' variant='flat' className='border font-medium border-primary w-full h-auto py-2 my-2'>More Detail</Button>
+        <Button as={Link} href={`/${item?.slug}`} startContent={<TbListDetails className="text-xl" />} color='primary' variant='flat' className='border font-medium border-primary w-full h-auto py-2 my-2'>More Detail</Button>
     </div >
 
     return (

@@ -1,6 +1,6 @@
-import Navbar from '../../../components/Navbar'
-import Sidebar from '../../../components/Sidebar'
-import "./../../../globals.css"
+import Navbar from '../../components/Navbar'
+import Sidebar from '../../components/Sidebar'
+import "./../../globals.css"
 
 export default function layout({
   children,
@@ -10,10 +10,10 @@ export default function layout({
   return (
     <div className='max-w-[1440px] mx-auto px-2'>
       <div className='flex flex-col xl:flex-row gap-2 pt-10 pb-14'>
-        <div className='xl:max-w-[75%]'>
+        <div className='flex-1 xl:max-w-[75%]'>
           {children}
         </div>
-        <div className='w-full min-w-[25%]'>
+        <div className='w-full xl:max-w-[28%] min-w-[25%]'>
           <Sidebar />
         </div>
       </div>

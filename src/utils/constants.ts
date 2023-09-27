@@ -8,6 +8,7 @@ export const ANIMES = [
     {
         name: "One Piece",
         desc: 'Gol D. Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the Grand Line. The capture and execution of Roger by the World..',
+        slug: "one-piece",
         image: "/images/op.png",
         eps: 1069,
         type: "TV",
@@ -24,6 +25,7 @@ export const ANIMES = [
     {
         name: "Kimetsu no Yaiba: Katanakaji no Sato-hen",
         desc: 'For centuries, the Demon Slayer Corps has sacredly kept the location of Swordsmith Village a secret. As the village of the greatest forgers, it provides Demon Slayers with the finest...',
+        slug: "Kimetsu-no-Yaiba",
         image: "/images/ds.png",
         eps: 11,
         type: "ONA",
@@ -40,6 +42,7 @@ export const ANIMES = [
     {
         name: "One Piece",
         desc: 'Gol D. Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the Grand Line. The capture and execution of Roger by the World..',
+        slug: "one-piece",
         image: "/images/op.png",
         eps: 1069,
         type: "TV",
@@ -56,6 +59,7 @@ export const ANIMES = [
     {
         name: "Kimetsu no Yaiba: Katanakaji no Sato-hen",
         desc: 'For centuries, the Demon Slayer Corps has sacredly kept the location of Swordsmith Village a secret. As the village of the greatest forgers, it provides Demon Slayers with the finest...',
+        slug: "Kimetsu-no-Yaiba",
         image: "/images/ds.png",
         eps: 11,
         type: "TV",
@@ -73,6 +77,7 @@ export const ANIMES = [
     {
         name: "One Piece",
         desc: 'Gol D. Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the Grand Line. The capture and execution of Roger by the World..',
+        slug: "one-piece",
         image: "/images/op.png",
         eps: 1069,
         type: "TV",
