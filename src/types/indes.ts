@@ -15,5 +15,6 @@ export type animeT = {
     studio: string;
     director: string[];
     slug: string;
+    tags: string[];
     cast: string[];
 }

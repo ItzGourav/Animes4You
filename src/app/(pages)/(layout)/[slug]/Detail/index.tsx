@@ -88,6 +88,11 @@ export default function Detail({ slug }: { slug: string }) {
                     </div>
                 </div>
             </div>
+            <div className="bg-white/5 border-t border-t-white/20 p-4 flex flex-wrap gap-2">
+                {detail?.tags?.map((i, indx) => {
+                    return <Button as={Link} className="border text-white/60 hover:text-primary" href={`/tag/${i?.toLowerCase()}`} key={indx} size="sm" variant="bordered" radius="none" >{i}</Button>
+                })}
+            </div>
         </div>
     );
 }
