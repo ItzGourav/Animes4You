@@ -10,7 +10,6 @@ import { tv } from "tailwind-variants";
 import Link from "next/link";
 import SocialShare from "./SocialShare";
 import Synopsis from "./Synopsis";
-import EpList from "./EpList";
 import CommentList from "./Commnets";
 
 export default function Detail({ slug }: { slug: string }) {
