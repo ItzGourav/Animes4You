@@ -27,7 +27,7 @@ export default function EpList({ anime }: { anime: animeT }) {
 
             <div>
                 <Table classNames={{
-                    base: "h-[400px] relative bg-transparent",
+                    base: "h-[600px] relative bg-transparent",
                 }} aria-label="ep-list">
                     <TableHeader className='sticky top-0 left-0 w-full'>
                         <TableColumn>Ep</TableColumn>

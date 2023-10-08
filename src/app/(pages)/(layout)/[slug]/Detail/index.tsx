@@ -11,6 +11,7 @@ import Link from "next/link";
 import SocialShare from "./SocialShare";
 import Synopsis from "./Synopsis";
 import EpList from "./EpList";
+import CommentList from "./Commnets";
 
 export default function Detail({ slug }: { slug: string }) {
     const [detail, setDetail] = useState(
@@ -98,7 +99,8 @@ export default function Detail({ slug }: { slug: string }) {
             </div>
             <SocialShare image={detail?.image} />
             <Synopsis anime={detail} />
-            <EpList anime={detail} />
+            {/* <EpList anime={detail} /> */}
+            <CommentList />
         </div>
     );
 }
