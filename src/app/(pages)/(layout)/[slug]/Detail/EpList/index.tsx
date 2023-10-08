@@ -26,19 +26,21 @@ export default function EpList({ anime }: { anime: animeT }) {
             </div>
 
             <div>
-                <Table isStriped aria-label="Example static collection table">
-                    <TableHeader>
+                <Table classNames={{
+                    base: "h-[400px] relative bg-transparent",
+                }} aria-label="ep-list">
+                    <TableHeader className='sticky top-0 left-0 w-full'>
                         <TableColumn>Ep</TableColumn>
                         <TableColumn>Name</TableColumn>
                         <TableColumn>SUB/DUB</TableColumn>
                         <TableColumn>Release Date</TableColumn>
                     </TableHeader>
-                    <TableBody className='overflow-auto'>
+                    <TableBody >
                         {
                             Array.from({ length: anime.eps }, (_, i) => i++).map((i) => {
                                 return (
-                                    <TableRow key={i}>
-                                        <TableCell>{i}</TableCell>
+                                    <TableRow className={` ${(i + 1) % 2 === 0 ? "bg-white/5 hover:bg-primary" : "hover:bg-primary"} text-white transition-all cursor-pointer`} key={i}>
+                                        <TableCell className='py-4'>{i + 1}</TableCell>
                                         <TableCell>{anime.name}</TableCell>
                                         <TableCell>{anime?.subOrDub}</TableCell>
                                         <TableCell>14, June 2022</TableCell>
@@ -48,7 +50,6 @@ export default function EpList({ anime }: { anime: animeT }) {
                         }
                     </TableBody>
                 </Table>
-
             </div>
         </div >
     )
