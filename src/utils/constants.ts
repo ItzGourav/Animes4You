@@ -48,14 +48,25 @@ export const ANIMES = [
             "bokunoheroacademia",
             "franky",
             "chopper",
-            "onepiecememes"
+            "onepiecememes",
         ],
         director: ["Nagamine Tatsuya", "Uda Kounosuke"],
-        cast: ["Cho", "Gouri", "Daisuke", "Hirata", "Hiroaki", "Nakai", "Kazuya", "Okamura", "Akemi", "Ootani", "Ikue", "Tanaka", "Mayumi", "Yamaguchi", "Kappei", "Yamaguchi", "Yuriko", "Yao", "Kazuki"]
+        cast: [
+            "Cho",
+            "Gouri Daisuke",
+            "Hirata Hiroaki",
+            "Nakai Kazuya",
+            "Okamura Akemi",
+            "Ootani Ikue",
+            "Tanaka Mayumi",
+            "Yamaguchi Kappei",
+            "Yamaguchi Yuriko",
+            "Yao Kazuki",
+        ],
     },
     {
         name: "Kimetsu no Yaiba: Katanakaji no Sato-hen",
-        desc: 'For centuries, the Demon Slayer Corps has sacredly kept the location of Swordsmith Village a secret. As the village of the greatest forgers, it provides Demon Slayers with the finest...',
+        desc: "For centuries, the Demon Slayer Corps has sacredly kept the location of Swordsmith Village a secret. As the village of the greatest forgers, it provides Demon Slayers with the finest...",
         slug: "Kimetsu-no-Yaiba",
         image: "/images/ds.png",
         eps: 11,
@@ -88,10 +99,21 @@ export const ANIMES = [
             "tomiokagiyuu",
             "giyuu",
             "kanaotsuyuri",
-            "tanjirou"
+            "tanjirou",
         ],
-        cast: ["Hanae", "Natsuki", "Hanazawa", "Kana", "Hino", "Satoshi", "Ishida", "Akira", "Kawanishi", "Kengo", "Kitou", "Akari", "Konishi", "Katsuyuki", "Matsuoka", "Yoshitsugu", "Shimono", "Hiro", "Ueda", "Reina"],
-        director: ["Haruo Sotozaki"]
+        cast: [
+            "Hanae Natsuki",
+            "Hanazawa Kana",
+            "Hino Satoshi",
+            "Ishida Akira",
+            "Kawanishi Kengo",
+            "Kitou Akari",
+            "Konishi Katsuyuki",
+            "Matsuoka Yoshitsugu",
+            "Shimono Hiro",
+            "Ueda Reina",
+        ],
+        director: ["Haruo Sotozaki"],
     },
     {
         name: "One Piece",
@@ -136,14 +158,25 @@ export const ANIMES = [
             "bokunoheroacademia",
             "franky",
             "chopper",
-            "onepiecememes"
+            "onepiecememes",
         ],
         director: ["Nagamine Tatsuya", "Uda Kounosuke"],
-        cast: ["Cho", "Gouri", "Daisuke", "Hirata", "Hiroaki", "Nakai", "Kazuya", "Okamura", "Akemi", "Ootani", "Ikue", "Tanaka", "Mayumi", "Yamaguchi", "Kappei", "Yamaguchi", "Yuriko", "Yao", "Kazuki"]
+        cast: [
+            "Cho",
+            "Gouri Daisuke",
+            "Hirata Hiroaki",
+            "Nakai Kazuya",
+            "Okamura Akemi",
+            "Ootani Ikue",
+            "Tanaka Mayumi",
+            "Yamaguchi Kappei",
+            "Yamaguchi Yuriko",
+            "Yao Kazuki",
+        ],
     },
     {
         name: "Kimetsu no Yaiba: Katanakaji no Sato-hen",
-        desc: 'For centuries, the Demon Slayer Corps has sacredly kept the location of Swordsmith Village a secret. As the village of the greatest forgers, it provides Demon Slayers with the finest...',
+        desc: "For centuries, the Demon Slayer Corps has sacredly kept the location of Swordsmith Village a secret. As the village of the greatest forgers, it provides Demon Slayers with the finest...",
         slug: "Kimetsu-no-Yaiba",
         image: "/images/ds.png",
         eps: 11,
@@ -176,11 +209,21 @@ export const ANIMES = [
             "tomiokagiyuu",
             "giyuu",
             "kanaotsuyuri",
-            "tanjirou"
+            "tanjirou",
         ],
-        cast: ["Hanae", "Natsuki", "Hanazawa", "Kana", "Hino", "Satoshi", "Ishida", "Akira", "Kawanishi", "Kengo", "Kitou", "Akari", "Konishi", "Katsuyuki", "Matsuoka", "Yoshitsugu", "Shimono", "Hiro", "Ueda", "Reina"],
-        director: ["Haruo Sotozaki"]
-
+        cast: [
+            "Hanae Natsuki",
+            "Hanazawa Kana",
+            "Hino Satoshi",
+            "Ishida Akira",
+            "Kawanishi Kengo",
+            "Kitou Akari",
+            "Konishi Katsuyuki",
+            "Matsuoka Yoshitsugu",
+            "Shimono Hiro",
+            "Ueda Reina",
+        ],
+        director: ["Haruo Sotozaki"],
     },
     {
         name: "One Piece",
@@ -225,12 +268,23 @@ export const ANIMES = [
             "bokunoheroacademia",
             "franky",
             "chopper",
-            "onepiecememes"
+            "onepiecememes",
         ],
         director: ["Nagamine Tatsuya", "Uda Kounosuke"],
-        cast: ["Cho", "Gouri", "Daisuke", "Hirata", "Hiroaki", "Nakai", "Kazuya", "Okamura", "Akemi", "Ootani", "Ikue", "Tanaka", "Mayumi", "Yamaguchi", "Kappei", "Yamaguchi", "Yuriko", "Yao", "Kazuki"]
+        cast: [
+            "Cho",
+            "Gouri Daisuke",
+            "Hirata Hiroaki",
+            "Nakai Kazuya",
+            "Okamura Akemi",
+            "Ootani Ikue",
+            "Tanaka Mayumi",
+            "Yamaguchi Kappei",
+            "Yamaguchi Yuriko",
+            "Yao Kazuki",
+        ],
     },
-]
+];
 
 export const GENRE = [
     { label: "Action", value: "action" },

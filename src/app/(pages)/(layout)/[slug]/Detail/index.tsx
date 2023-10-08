@@ -68,12 +68,12 @@ export default function Detail({ slug }: { slug: string }) {
                         </div>
                         <div className="max-w-[40%]">
                             <div className={itemV()}><BsFillSquareFill className={iconsV()} />Censor: Censored</div>
-                            <div className={itemV()}><BsFillSquareFill className={iconsV()} />Director: {detail?.director?.map((i) =>
-                                <Link key={i} className={LinkV()} href={`/director/${i.replaceAll(" ", "-")}`}>{i}</Link>
+                            <div className={itemV()}><BsFillSquareFill className={iconsV()} />Director: {detail?.director?.map((i, indx) =>
+                                <Link key={indx} className={LinkV()} href={`/director/${i.replaceAll(" ", "-")}`}>{i}</Link>
                             )}
                             </div>
                             <div className={itemV()}><BsFillSquareFill className={iconsV()} />Casts: {detail?.cast?.map((i, indx) =>
-                                <Link key={i} className={LinkV()} href={`/cast/${i.replaceAll(" ", "-")}`}>{i}{indx === detail?.cast?.length - 1 ? "." : ","}</Link>
+                                <Link key={indx} className={LinkV()} href={`/cast/${i.replaceAll(" ", "-")}`}>{i}{indx === detail?.cast?.length - 1 ? "." : ","}</Link>
                             )}</div>
                             <div className={itemV()}><BsFillSquareFill className={iconsV()} />Posted by: wish</div>
                             <div className={itemV()}><BsFillSquareFill className={iconsV()} />Released on: September 12, 2023</div>

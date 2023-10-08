@@ -1,5 +1,6 @@
 import { Avatar, Divider, Input } from '@nextui-org/react'
 import React, { useEffect, useState } from 'react'
+import { BiSad } from 'react-icons/bi';
 import { FiDelete } from 'react-icons/fi';
 import { RiDeleteBack2Fill, RiDeleteBackLine, RiDeleteBin2Fill } from 'react-icons/ri';
 
@@ -48,6 +49,10 @@ export default function CommentList() {
                         placeholder='Leave a comment' />
                 </div>
             </div>
+
+            {
+                list?.length === 0 && <div className='flex flex-col items-center my-5 text-white/80'><BiSad className="text-2xl" /> No Comments Yet</div>
+            }
 
             {list.map((i, indx) => {
                 return <div className='p-3 bg-white/[6%] mx-3 mb-3 rounded-md' key={indx}>
