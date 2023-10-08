@@ -12,3 +12,25 @@ body {
   background-color: #111111;
   color: rgb(223, 229, 235);
 }
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #9241e2 #262626;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #262626d0;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #9241e2;
+  border-radius: 0px;
+  border: 0px solid #ffffff;
+}

@@ -9,6 +9,8 @@ import { BsFillBookmarkFill, BsBookmark, BsFillSquareFill } from "react-icons/bs
 import { tv } from "tailwind-variants";
 import Link from "next/link";
 import SocialShare from "./SocialShare";
+import Synopsis from "./Synopsis";
+import EpList from "./EpList";
 
 export default function Detail({ slug }: { slug: string }) {
     const [detail, setDetail] = useState(
@@ -94,7 +96,9 @@ export default function Detail({ slug }: { slug: string }) {
                     return <Button as={Link} className="border text-white/60 hover:text-primary" href={`/tag/${i?.toLowerCase()}`} key={indx} size="sm" variant="bordered" radius="none" >{i}</Button>
                 })}
             </div>
-            <SocialShare />
+            <SocialShare image={detail?.image} />
+            <Synopsis anime={detail} />
+            <EpList anime={detail} />
         </div>
     );
 }

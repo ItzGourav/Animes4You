@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { FacebookIcon, FacebookShareButton, PinterestIcon, PinterestShareButton, TwitterIcon, TwitterShareButton, WhatsappIcon, WhatsappShareButton } from "react-share"
 
-export default function SocialShare() {
+export default function SocialShare({ image }: { image: string }) {
     const [url, setUrl] = useState("")
 
     useEffect(() => {
@@ -23,7 +23,7 @@ export default function SocialShare() {
                 <WhatsappShareButton url={url}>
                     <WhatsappIcon round size={40} />
                 </WhatsappShareButton>
-                <PinterestShareButton media="" url={url}>
+                <PinterestShareButton media={image} url={url}>
                     <PinterestIcon round size={40} />
                 </PinterestShareButton>
             </div>
