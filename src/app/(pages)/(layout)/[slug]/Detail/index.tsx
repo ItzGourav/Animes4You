@@ -8,6 +8,7 @@ import StarRatings from "react-star-ratings";
 import { BsFillBookmarkFill, BsBookmark, BsFillSquareFill } from "react-icons/bs";
 import { tv } from "tailwind-variants";
 import Link from "next/link";
+import SocialShare from "./SocialShare";
 
 export default function Detail({ slug }: { slug: string }) {
     const [detail, setDetail] = useState(
@@ -93,6 +94,7 @@ export default function Detail({ slug }: { slug: string }) {
                     return <Button as={Link} className="border text-white/60 hover:text-primary" href={`/tag/${i?.toLowerCase()}`} key={indx} size="sm" variant="bordered" radius="none" >{i}</Button>
                 })}
             </div>
+            <SocialShare />
         </div>
     );
 }
