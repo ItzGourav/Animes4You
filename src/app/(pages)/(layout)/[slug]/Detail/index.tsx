@@ -9,13 +9,17 @@ import Synopsis from "./Synopsis";
 import CommentList from "./Commnets";
 import AnimeMainInfo from "@/app/components/AnimeMainInfo";
 import EpList from "./EpList";
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Detail({ slug }: { slug: string }) {
     const [detail, setDetail] = useState(
         ANIMES.filter((i) => i.slug === slug)[0]
     );
+    const router = useRouter()
+
     return (
-        <div>
+        detail ? <div>
             <AnimeMainInfo detail={detail} />
             <div className="bg-white/5 border-t border-t-white/20 p-4 flex flex-wrap gap-2">
                 {detail?.tags?.map((i, indx) => {
@@ -27,5 +31,16 @@ export default function Detail({ slug }: { slug: string }) {
             <EpList anime={detail} />
             <CommentList />
         </div>
+            :
+            <div className="flex justify-center py-12 pb-20 text-center">
+                <div>
+                    <div className="relative h-72 aspect-video">
+                        <Image fill src={"/images/404.png"} alt="404" />
+                    </div>
+                    <div>
+                        <Button color="primary" onClick={() => router.push("/")} >Go Home</Button>
+                    </div>
+                </div>
+            </div>
     );
 }

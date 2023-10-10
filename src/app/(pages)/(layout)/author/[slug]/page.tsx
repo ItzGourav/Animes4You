@@ -11,7 +11,7 @@ export default function Author({ params }: { params: { slug: string } }) {
             </div>
             <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-3 gap-y-7 py-5'>
                 {[...ANIMES].map((i, indx) => {
-                    return <AnimeCard key={indx} item={i} />
+                    return <AnimeCard key={indx} anime={i} />
                 })}
             </div>
         </div>

@@ -35,7 +35,7 @@ export default function Recommendation() {
             </div>
             <div className='w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3'>
                 {ANIMES.map((i, indx) => {
-                    return <AnimeCard key={indx} item={i} pos={indx + 1} />
+                    return <AnimeCard key={indx} anime={i} pos={indx + 1} />
                 })}
             </div>
         </div>

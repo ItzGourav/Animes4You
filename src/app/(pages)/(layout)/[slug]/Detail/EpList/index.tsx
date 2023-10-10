@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import { tv } from 'tailwind-variants'
 
 export default function EpList({ anime }: { anime: animeT }) {
-    const [allEps, setAllEps] = useState(Array.from({ length: anime.eps }, (_, i) => i++))
+    const [allEps, setAllEps] = useState(Array.from({ length: anime?.eps }, (_, i) => i++))
 
     const [page, setPage] = React.useState(1);
     const rowsPerPage = 30;
@@ -20,7 +20,7 @@ export default function EpList({ anime }: { anime: animeT }) {
     }, [page, allEps]);
 
     return (
-        <div className='my-7 py-1  bg-white/5 rounded-md'>
+        <div className='my-7 py-1 bg-white/5 rounded-md'>
             <div className='font-semibold p-3 text-lg'>
                 Watch {anime?.name}
             </div>
@@ -34,7 +34,7 @@ export default function EpList({ anime }: { anime: animeT }) {
                     </Button>
                     <Button size='lg' color='primary' className={epBtnV()} >
                         <div>Last Ep</div>
-                        <div className='font-semibold text-xl'>Episode {anime.eps}</div>
+                        <div className='font-semibold text-xl'>Episode {anime?.eps}</div>
                     </Button>
                 </div>
             </div>
@@ -43,7 +43,7 @@ export default function EpList({ anime }: { anime: animeT }) {
                 <Table
                     isHeaderSticky
                     bottomContent={
-                        <div className="flex w-full justify-center">
+                        pages ? <div className="flex w-full justify-center">
                             <Pagination
                                 isCompact
                                 showControls
@@ -54,9 +54,11 @@ export default function EpList({ anime }: { anime: animeT }) {
                                 onChange={(page) => setPage(page)}
                             />
                         </div>
+                            :
+                            <></>
                     }
                     classNames={{
-                        base: "h-[600px] relative bg-transparent",
+                        base: "max-h-[600px] relative bg-transparent",
                     }} aria-label="ep-list">
                     <TableHeader className='text-white/90'>
                         <TableColumn>EP</TableColumn>
@@ -70,7 +72,7 @@ export default function EpList({ anime }: { anime: animeT }) {
                                 return (
                                     <TableRow className={` ${(i + 1) % 2 === 0 ? "bg-white/5 hover:bg-primary" : "hover:bg-primary"} hover:text-white/90 text-white/60 transition-all cursor-pointer`} key={i}>
                                         <TableCell className='py-4'>{i + 1}</TableCell>
-                                        <TableCell>{anime.name}</TableCell>
+                                        <TableCell>{anime?.name}</TableCell>
                                         <TableCell>{anime?.subOrDub}</TableCell>
                                         <TableCell>14, June 2022</TableCell>
                                     </TableRow>
