@@ -13,6 +13,7 @@ export type animeT = {
     status: string;
     rating: string;
     studio: string;
+    author: string;
     director: string[];
     slug: string;
     tags: string[];

@@ -1,10 +1,24 @@
 "use client"
 import { animeT } from '@/types/indes'
-import { Button, Divider, Table, TableBody, TableCell, TableColumn, TableHeader, TableRow } from '@nextui-org/react'
-import React from 'react'
+import { Button, Divider, Pagination, Table, TableBody, TableCell, TableColumn, TableHeader, TableRow } from '@nextui-org/react'
+import React, { useState } from 'react'
 import { tv } from 'tailwind-variants'
 
 export default function EpList({ anime }: { anime: animeT }) {
+    const [allEps, setAllEps] = useState(Array.from({ length: anime.eps }, (_, i) => i++))
+
+    const [page, setPage] = React.useState(1);
+    const rowsPerPage = 30;
+
+    const pages = Math.ceil(allEps.length / rowsPerPage);
+
+    const items = React.useMemo(() => {
+        const start = (page - 1) * rowsPerPage;
+        const end = start + rowsPerPage;
+
+        return allEps.slice(start, end);
+    }, [page, allEps]);
+
     return (
         <div className='my-7 py-1  bg-white/5 rounded-md'>
             <div className='font-semibold p-3 text-lg'>
@@ -26,9 +40,24 @@ export default function EpList({ anime }: { anime: animeT }) {
             </div>
 
             <div>
-                <Table classNames={{
-                    base: "h-[600px] relative bg-transparent",
-                }} aria-label="ep-list">
+                <Table
+                    isHeaderSticky
+                    bottomContent={
+                        <div className="flex w-full justify-center">
+                            <Pagination
+                                isCompact
+                                showControls
+                                showShadow
+                                color="secondary"
+                                page={page}
+                                total={pages}
+                                onChange={(page) => setPage(page)}
+                            />
+                        </div>
+                    }
+                    classNames={{
+                        base: "h-[600px] relative bg-transparent",
+                    }} aria-label="ep-list">
                     <TableHeader className='sticky top-0 left-0 w-full'>
                         <TableColumn>Ep</TableColumn>
                         <TableColumn>Name</TableColumn>
@@ -37,7 +66,7 @@ export default function EpList({ anime }: { anime: animeT }) {
                     </TableHeader>
                     <TableBody >
                         {
-                            Array.from({ length: anime.eps }, (_, i) => i++).map((i) => {
+                            items.map((i) => {
                                 return (
                                     <TableRow className={` ${(i + 1) % 2 === 0 ? "bg-white/5 hover:bg-primary" : "hover:bg-primary"} text-white transition-all cursor-pointer`} key={i}>
                                         <TableCell className='py-4'>{i + 1}</TableCell>
