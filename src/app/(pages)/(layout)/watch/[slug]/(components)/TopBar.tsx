@@ -5,15 +5,16 @@ import Link from 'next/link'
 import React from 'react'
 import { tv } from 'tailwind-variants'
 import { PiDotOutlineFill } from "react-icons/pi"
+import SocialShare from '../../../../../components/(anime)/SocialShare'
 
 export default function TopBar({ anime }: { anime: animeT }) {
     return (
-        <div className='bg-white/5 p-3 rounded-md mb-4'>
+        <div className='bg-white/5 p-3 flex justify-between flex-wrap gap-5 rounded-md mb-4'>
             <div className='space-y-1'>
                 <div className='underline text-xl font-medium decoration-primary'>
                     [Watch] {anime?.name} episode {anime?.eps}
                 </div>
-                <div className='text-xs text-white/40 flex items-center font-light gap-1'>
+                <div className='text-xs text-white/40 flex whitespace-nowrap flex-wrap items-center font-light gap-1'>
                     <Chip color='warning' >{anime?.subOrDub}</Chip>
                     <div>Released on September 26, 2023</div>
                     <PiDotOutlineFill />
@@ -24,8 +25,8 @@ export default function TopBar({ anime }: { anime: animeT }) {
                     <div>Series: <Link className={LinkV({ class: "capitalize font-medium text-sm" })} href={`/${anime?.slug}`}>{anime?.slug?.replaceAll("-", " ")}</Link></div>
                 </div>
             </div>
-            <div>
-
+            <div className='self-end'>
+                <SocialShare iconSize={28} isWidthFull={false} image={anime?.image} />
             </div>
         </div>
     )
