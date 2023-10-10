@@ -58,17 +58,17 @@ export default function EpList({ anime }: { anime: animeT }) {
                     classNames={{
                         base: "h-[600px] relative bg-transparent",
                     }} aria-label="ep-list">
-                    <TableHeader className='sticky top-0 left-0 w-full'>
-                        <TableColumn>Ep</TableColumn>
-                        <TableColumn>Name</TableColumn>
+                    <TableHeader className='text-white/90'>
+                        <TableColumn>EP</TableColumn>
+                        <TableColumn>NAME</TableColumn>
                         <TableColumn>SUB/DUB</TableColumn>
-                        <TableColumn>Release Date</TableColumn>
+                        <TableColumn>RELEASE DATE</TableColumn>
                     </TableHeader>
                     <TableBody >
                         {
                             items.map((i) => {
                                 return (
-                                    <TableRow className={` ${(i + 1) % 2 === 0 ? "bg-white/5 hover:bg-primary" : "hover:bg-primary"} text-white transition-all cursor-pointer`} key={i}>
+                                    <TableRow className={` ${(i + 1) % 2 === 0 ? "bg-white/5 hover:bg-primary" : "hover:bg-primary"} hover:text-white/90 text-white/60 transition-all cursor-pointer`} key={i}>
                                         <TableCell className='py-4'>{i + 1}</TableCell>
                                         <TableCell>{anime.name}</TableCell>
                                         <TableCell>{anime?.subOrDub}</TableCell>
