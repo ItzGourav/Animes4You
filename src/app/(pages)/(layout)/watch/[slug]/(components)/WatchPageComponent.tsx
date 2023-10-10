@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import TopBar from './TopBar';
 import AnimeMainInfo from '@/app/components/AnimeMainInfo';
 import Synopsis from '@/app/components/(anime)/Synopsis';
+import CommentList from '@/app/components/(anime)/Commnets';
 
 export default function WatchPageComponent({ slug }: { slug: string }) {
     const [detail, setDetail] = useState(
@@ -17,6 +18,7 @@ export default function WatchPageComponent({ slug }: { slug: string }) {
             <TopBar anime={detail} />
             <AnimeMainInfo detail={detail} />
             <Synopsis anime={detail} />
+            <CommentList />
         </div>
     )
 }

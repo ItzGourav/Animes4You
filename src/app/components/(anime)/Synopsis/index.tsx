@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Synopsis({ anime }: { anime: animeT }) {
     return (
-        <div className='bg-white/5 text-lg rounded-md'>
+        <div className='bg-white/5 text-lg my-5 rounded-md'>
             <div className='p-3 font-semibold'>Synopsis for {anime?.name}</div>
             <Divider />
             <div className='p-3 text-sm text-white/70 '>
