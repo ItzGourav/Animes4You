@@ -2,6 +2,8 @@
 import { ANIMES } from '@/utils/constants';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
+import TopBar from './TopBar';
+import AnimeMainInfo from '@/app/components/AnimeMainInfo';
 
 export default function WatchPageComponent({ slug }: { slug: string }) {
     const [detail, setDetail] = useState(
@@ -11,7 +13,8 @@ export default function WatchPageComponent({ slug }: { slug: string }) {
     const router = useRouter()
     return (
         <div>
-
+            <TopBar anime={detail} />
+            <AnimeMainInfo detail={detail} />
         </div>
     )
 }
