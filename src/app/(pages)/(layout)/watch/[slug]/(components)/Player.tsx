@@ -11,7 +11,7 @@ export default function Player({ anime }: { anime: string }) {
             />
             <div className='flex pt-3 gap-4'>
                 <Button variant='flat' radius='sm' size='lg' className='w-full text-white/70'><BsFillCaretLeftFill />Prev</Button>
-                <Button as={Link} href={`/${anime}`} variant='flat' color='primary' radius='sm' size='lg' className='w-full'><BsViewList />All Episodes </Button>
+                <Button as={Link} href={`/${anime}#ep-list`} variant='flat' color='primary' radius='sm' size='lg' className='w-full'><BsViewList />All Episodes </Button>
                 <Button variant='flat' radius='sm' size='lg' className='w-full text-white/70'>Next<BsFillCaretRightFill /></Button>
             </div>
         </div>

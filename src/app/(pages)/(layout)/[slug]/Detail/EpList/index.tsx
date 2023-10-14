@@ -1,6 +1,7 @@
 "use client"
 import { animeT } from '@/types/indes'
 import { Button, Divider, Pagination, Table, TableBody, TableCell, TableColumn, TableHeader, TableRow } from '@nextui-org/react'
+import Link from 'next/link'
 import React, { useState } from 'react'
 import { tv } from 'tailwind-variants'
 
@@ -20,7 +21,7 @@ export default function EpList({ anime }: { anime: animeT }) {
     }, [page, allEps]);
 
     return (
-        <div className='my-7 py-1 bg-white/5 rounded-md'>
+        <div id='ep-list' className='my-7 py-1 bg-white/5 rounded-md'>
             <div className='font-semibold p-3 text-lg'>
                 Watch {anime?.name}
             </div>
@@ -28,11 +29,11 @@ export default function EpList({ anime }: { anime: animeT }) {
 
             <div className='p-3 my-4'>
                 <div className='flex gap-2 w-full'>
-                    <Button size='lg' color='primary' className={epBtnV()} >
+                    <Button as={Link} href={`/watch/${anime.slug}`} size='lg' color='primary' className={epBtnV()} >
                         <div>First Ep</div>
                         <div className='font-semibold text-xl'>Episode 1</div>
                     </Button>
-                    <Button size='lg' color='primary' className={epBtnV()} >
+                    <Button as={Link} href={`/watch/${anime.slug}`} size='lg' color='primary' className={epBtnV()} >
                         <div>Last Ep</div>
                         <div className='font-semibold text-xl'>Episode {anime?.eps}</div>
                     </Button>
@@ -68,10 +69,14 @@ export default function EpList({ anime }: { anime: animeT }) {
                     </TableHeader>
                     <TableBody >
                         {
-                            items.map((i) => {
+                            items.map((i, indx) => {
                                 return (
-                                    <TableRow className={` ${(i + 1) % 2 === 0 ? "bg-white/5 hover:bg-primary" : "hover:bg-primary"} hover:text-white/90 text-white/60 transition-all cursor-pointer`} key={i}>
-                                        <TableCell className='py-4'>{i + 1}</TableCell>
+                                    <TableRow as={Link} className={` ${(i + 1) % 2 === 0 ? "bg-white/5 hover:bg-primary" : "hover:bg-primary"} hover:text-white/90 text-white/60 transition-all cursor-pointer`} key={i}>
+                                        <TableCell className='py-4'>
+                                            <Link className='underline decoration-primary decoration-2 text-lg' href={`/watch/${anime.slug}`}>
+                                                {i + 1}
+                                            </Link>
+                                        </TableCell>
                                         <TableCell>{anime?.name}</TableCell>
                                         <TableCell>{anime?.subOrDub}</TableCell>
                                         <TableCell>14, June 2022</TableCell>
