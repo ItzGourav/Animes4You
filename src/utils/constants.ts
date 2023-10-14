@@ -69,7 +69,7 @@ export const ANIMES = [
         author: "wish",
         name: "Kimetsu no Yaiba: Katanakaji no Sato-hen",
         desc: "For centuries, the Demon Slayer Corps has sacredly kept the location of Swordsmith Village a secret. As the village of the greatest forgers, it provides Demon Slayers with the finest...",
-        slug: "Kimetsu-no-Yaiba",
+        slug: "kimetsu-no-yaiba",
         image: "/images/ds.png",
         eps: 11,
         type: "ONA",
