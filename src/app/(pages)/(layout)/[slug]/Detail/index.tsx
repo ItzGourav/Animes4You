@@ -9,7 +9,7 @@ import Synopsis from "../../../../components/(anime)/Synopsis";
 import CommentList from "../../../../components/(anime)/Commnets";
 import AnimeMainInfo from "@/app/components/AnimeMainInfo";
 import EpList from "./EpList";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next-nprogress-bar";
 import Image from "next/image";
 
 export default function Detail({ slug }: { slug: string }) {
